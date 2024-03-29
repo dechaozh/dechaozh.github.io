@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>老张的学习笔记</title>
+  
+  <subtitle>一点点开始学</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2024-03-29T03:01:51.719Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>老张</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git报错笔记（2）</title>
+    <link href="http://example.com/2024/03/29/git%E6%8A%A5%E9%94%99%E7%AC%94%E8%AE%B0%EF%BC%882%EF%BC%89/"/>
+    <id>http://example.com/2024/03/29/git%E6%8A%A5%E9%94%99%E7%AC%94%E8%AE%B0%EF%BC%882%EF%BC%89/</id>
+    <published>2024-03-29T02:52:00.000Z</published>
+    <updated>2024-03-29T03:01:51.719Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="remote-Support-for-password-authentication-was-removed-on-August-13-2021"><a href="#remote-Support-for-password-authentication-was-removed-on-August-13-2021" class="headerlink" title="remote: Support for password authentication was removed on August 13, 2021."></a>remote: Support for password authentication was removed on August 13, 2021.</h1><p>在git push xx的时候，需要输入用户名和密码，这里的密码现在已经被github停止使用，而使用personal access token代替。<br>生成一个token的步骤如下：<br>Step 1: Go to your GitHub Account and then go to the Settings(click on your profile account and you will find the Settings option there)<br>Step 2: Scroll down and at the sidebar you will see the Developer Settings option. Click on Developer Settings.<br>Step 3: Click on Personal access tokens and then click on Tokens (classic)<br>Step 4: Click on Generate new token and then click on Generate new token (classic)<br>Step 5: Fill-up the Note field, select No expiration and then select the checkboxes (token可设置有效期)<br>Step 6: Click on the Generate token. Your token is created!.<br>Step 7: Copy the token and save it (保存好，网页上之后不会再显示了) </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;remote-Support-for-password-authentication-was-removed-on-August-13-2021&quot;&gt;&lt;a href=&quot;#remote-Support-for-password-authentication-was-r</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>git报错笔记</title>
+    <link href="http://example.com/2024/03/29/git%E6%8A%A5%E9%94%99%E7%AC%94%E8%AE%B0/"/>
+    <id>http://example.com/2024/03/29/git%E6%8A%A5%E9%94%99%E7%AC%94%E8%AE%B0/</id>
+    <published>2024-03-29T02:37:56.000Z</published>
+    <updated>2024-03-29T03:00:44.361Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="error-src-refspec-master-does-not-match-any"><a href="#error-src-refspec-master-does-not-match-any" class="headerlink" title="error: src refspec master does not match any"></a>error: src refspec master does not match any</h1><p>当你试图从本地仓库触发推送到主仓库时，git push origin master，你可能会遇到这样的错误：</p><p>error: src refspec master does not match any<br>error: failed to push some refs to ‘<a href="https://github.com/YOUR_ACCOUNT/YOUR_REPO.git">https://github.com/YOUR_ACCOUNT/YOUR_REPO.git</a>‘</p><p>这个错误可能是由不同原因引起的。最有可能出现这种错误的原因是，master分支不存在。也许你克隆了一个新的仓库，默认的分支是 main，所以当你试图推送时，没有 master 分支。</p><p>你可以用git branch命令来显示刚刚克隆的本地仓库分支。如果在结果中你没有看到有master，则当你试图推送到该仓库是，你会得到该错误。</p><p>这个结果也适用于任何其他不存在的分支。比如我做了一些修改，并推送到一个不存在的远程 hello分支：</p><p>git add .<br>git commit -m “new changes”<br>git push origin hello</p><p><em><strong><strong><strong><strong><strong><strong>解决方法</strong></strong></strong></strong></strong></strong></em><br>既然master分支不存在，则要么建立一个本地和远程的master分支，要么推送到一个现有分支，例如main分支。<br>可以在github网站页面上点击按钮创建new branch，也可以直接在本地终端上创建并推送到github：</p><p>git checkout -b master<br>git push origin master</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;error-src-refspec-master-does-not-match-any&quot;&gt;&lt;a href=&quot;#error-src-refspec-master-does-not-match-any&quot; class=&quot;headerlink&quot; title=&quot;error:</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://example.com/2024/03/28/hello-world/"/>
+    <id>http://example.com/2024/03/28/hello-world/</id>
+    <published>2024-03-28T13:02:38.637Z</published>
+    <updated>2024-03-28T13:02:38.637Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
